@@ -6,7 +6,7 @@ import express from "express";
 import { Liquid } from "liquidjs";
 
 // WHOIS API
-const API_BASE_URL = "https://fdnd-agency.directus.app/items/bib_stekjes";
+const API_BASE_URL = "https://fdnd-agency.directus.app/items";
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express();
@@ -38,17 +38,36 @@ app.post("/", async function (request, response) {
   response.redirect(303, "/");
 });
 
-// GET route stekjes
+// GET route voor het ophalen van alle stekjes
 app.get("/stekjes", async function (request, response) {
-  // Haal alle zaden uit de WHOIS API op
-  const stekjesResponse = await fetch(`${API_BASE_URL}`);
+  // Haal alle stekjes op vanuit de WHOIS API door een fetch-verzoek te sturen naar de eindpoint `/bib_stekjes`
+  const stekjesResponse = await fetch(`${API_BASE_URL}/bib_stekjes`);
 
-  // En haal daarvan de JSON op
+  // Zet het response-object om naar JSON-formaat, zodat we de data kunnen gebruiken
   const stekjesResponseResponseJSON = await stekjesResponse.json();
 
-  // Render stekjes.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd stekjes
+  // Render de `stekjes.liquid` template uit de views-map
+  // Geef de opgehaalde data mee als een variabele genaamd `stekjes`, zodat deze in de template gebruikt kan worden
   response.render("stekjes.liquid", {
     stekjes: stekjesResponseResponseJSON.data,
+  });
+});
+
+// GET route voor het ophalen van één specifiek stekje op basis van een ID
+app.get("/stekje/:id", async function (request, response) {
+  // Haal een specifiek stekje op vanuit de WHOIS API door een fetch-verzoek te sturen naar de eindpoint `/bib_stekjes/{id}`
+  // Het ID wordt uit de URL gehaald via `request.params.id`
+  const stekjesResponse = await fetch(
+    `${API_BASE_URL}/bib_stekjes/${request.params.id}`
+  );
+
+  // Zet het response-object om naar JSON-formaat, zodat we de data kunnen gebruiken
+  const stekjesResponseResponseJSON = await stekjesResponse.json();
+
+  // Render de `stekjes.liquid` template uit de views-map
+  // Geef de opgehaalde data mee als een variabele genaamd `stekjes`, zodat deze in de template gebruikt kan worden
+  response.render("stekjes.liquid", {
+    stekje: stekjesResponseResponseJSON.data,
   });
 });
 
