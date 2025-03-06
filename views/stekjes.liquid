@@ -1,4 +1,74 @@
 <details>
   <summary>Data</summary>
-  <pre>{{ stekjes | json : 4 }}</pre>
+<pre>{{ stekjes | json : 4 }}</pre>
 </details>
+
+<ul id="stekje">
+  {% for stekje in stekjes %}
+    <li class="stekje-item">
+      <a href="/stekje/{{ stekje.id }}">{{ stekje.naam }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h1>{{ stekje.naam }}</h1>
+
+<div class="stekje-info">
+    <!-- Foto van het stekje -->
+  <img src="{{ stekje.foto }}" alt="{{ stekje.naam }}">
+
+  <!-- Beschrijving van het stekje -->
+  <p>
+    <strong>Beschrijving:</strong>
+    {{ stekje.beschrijving }}</p>
+
+  <!-- Land van herkomst -->
+  <p>
+    <strong>Land van herkomst:</strong>
+    {{ stekje.land_van_herkomst }}</p>
+
+  <!-- Onderhoud -->
+  <p>
+    <strong>Onderhoud:</strong>
+    {{ stekje.onderhoud }}</p>
+
+  <!-- Zonlicht -->
+  <p>
+    <strong>Zonlicht:</strong>
+    {{ stekje.zonlicht }}</p>
+
+  <!-- Watergeven -->
+  <p>
+    <strong>Watergeven:</strong>
+    {{ stekje.watergeven }}</p>
+
+  <!-- Voeding -->
+  <p>
+    <strong>Voeding:</strong>
+    {{ stekje.voeding }}</p>
+
+  <!-- Verpotten -->
+  <p>
+    <strong>Verpotten:</strong>
+    {{ stekje.verpotten }}</p>
+
+  <!-- Temperatuur -->
+  <p>
+    <strong>Temperatuur:</strong>
+    {{ stekje.temperatuur }}</p>
+
+  <!-- Giftig voor huisdieren -->
+  <p>
+    <strong>Giftig voor huisdieren:</strong>
+    {{ stekje.giftig }}</p>
+
+  <!-- Aanmelddatum -->
+  <p>
+    <strong>Aanmelddatum:</strong>
+    {{ stekje.aanmelddatum | date: "%d-%m-%Y" }}</p>
+
+  <!-- Instructies voor stekken -->
+  <p>
+    <strong>Hoe te stekken:</strong>
+    {{ stekje.stekken }}</p>
+</div>
