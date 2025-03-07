@@ -66,7 +66,7 @@ app.get("/stekje/:id", async function (request, response) {
 
   // Render de `stekjes.liquid` template uit de views-map
   // Geef de opgehaalde data mee als een variabele genaamd `stekjes`, zodat deze in de template gebruikt kan worden
-  response.render("stekjes.liquid", {
+  response.render("stekjeDetail.liquid", {
     stekje: stekjesResponseResponseJSON.data,
   });
 });
