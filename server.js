@@ -11,6 +11,9 @@ const API_BASE_URL = "https://fdnd-agency.directus.app/items";
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express();
 
+// Maak werken met data uit formulieren iets prettiger
+app.use(express.urlencoded({extended: true}))
+
 // Gebruik de map 'public' voor statische bestanden (resources zoals CSS, JavaScript, afbeeldingen en fonts)
 // Bestanden in deze map kunnen dus door de browser gebruikt worden
 app.use(express.static("public"));
