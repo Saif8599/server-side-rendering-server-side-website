@@ -39,7 +39,7 @@ body {
   --error-color: #ff0000; /* Red */
 
   /* Fonts */
-  --font-header: "Poppins-Black", sans-serif;
+  --poppins: "Poppins-regular", sans-serif;
 
   /* Typography */
   --font-size-desktop-xl: 3em;
@@ -52,7 +52,7 @@ body {
   --font-size-mobile-s: 0.8em;
 
   /* General Styles */
-  font-family: var(--font-header);
+  font-family: var(--poppins);
   color: var(--secondary-text-color);
   background-color: var(--primary-background-color);
   line-height: 1.4;
@@ -66,7 +66,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-header);
+  font-family: var(--poppins);
   color: var(--secondary-text-color);
   margin: 0.5em 0;
 }
@@ -155,49 +155,4 @@ input[type="submit"] {
     background-color: var(--primary-highlight-color);
     transform: scale(1.05);
   }
-}
-
-/* Footer */
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #f2deab;
-  padding: 3em 1em 3em 1em;
-  gap: 30px;
-  border-radius: 20px 20px 0px 0px;
-  z-index: 30;
-
-  @media screen and (min-width: 740px) {
-    flex-direction: row;
-    padding: 4em 3em 7em 3em;
-    justify-content: space-between;
-  }
-
-  @media screen and (min-width: 1000px) {
-    flex-direction: row;
-    padding: 5em 6em 5em 6em;
-    justify-content: space-between;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding: 5em 8em 5em 8em;
-  }
-}
-
-/* Logo Bieb in Bloei */
-footer figure {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-family: var(--font-paragraph);
-  color: var(--text-darkgreen);
-
-  @media screen and (min-width: 740px) {
-    width: 33.3%;
-  }
-}
-
-/* Menu items */
-footer h3 {
-  font-size: 1.4em;
 }
