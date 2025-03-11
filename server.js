@@ -74,6 +74,11 @@ app.get("/stekje/:id", async function (request, response) {
   });
 });
 
+// Geen matching route request 
+app.use((req, res) => {
+  res.status(404).render("404.liquid");
+});
+
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000, als dit ergens gehost wordt, is het waarschijnlijk poort 80
 app.set("port", process.env.PORT || 8000);
