@@ -1,3 +1,8 @@
+{% render 'partials/head.liquid'
+  , title: 'Bieb in Bloei' %}
+
+{% include 'partials/navbar.liquid' %}
+
 <details>
   <summary>Data</summary>
 <pre>{{ stekjes | json : 4 }}</pre>
@@ -10,3 +15,5 @@
     </li>
   {% endfor %}
 </ul>
+
+{% render 'partials/foot.liquid' %}

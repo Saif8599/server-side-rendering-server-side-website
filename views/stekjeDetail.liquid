@@ -1,3 +1,8 @@
+{% render 'partials/head.liquid'
+  , title: 'Bieb in Bloei' %}
+
+{% include 'partials/navbar.liquid' %}
+
 <h1>{{ stekje.naam }}</h1>
 
 <div class="stekje-info">
@@ -47,3 +52,5 @@
     Hoe te stekken:
     {{ stekje.stekken }}</p>
 </div>
+
+{% render 'partials/foot.liquid' %}
