@@ -16,7 +16,7 @@ Elke URL binnen een website of webapplicatie moet ontworpen worden. Te vaak word
 
 Schrijf met je tafel op het whiteboard vijf voorbeelden van “lelijke” URLs. Gebruik hiervoor websites uit je eigen omgeving, bijvoorbeeld die van je eigen volleybalvereniging, pilatesclub, dansschool, bijbaantje, gym of het werk van je ouders. Wat maakt een URL “lelijk”?
 
-Onderzoek aan de hand van onderstaand _What are the parts of a URL?_ web.dev artikel op welke onderdelen van een URL jij als frontend ontwikkelaar in Sprint 8 invloed hebt, en op welke (nog) niet. Maak hiervan een kort overzicht op jullie whiteboard.
+👉 Onderzoek aan de hand van onderstaand _What are the parts of a URL?_ web.dev artikel op welke onderdelen van een URL jij als frontend ontwikkelaar in Sprint 8 invloed hebt, en op welke (nog) niet. Maak hiervan een kort overzicht op jullie whiteboard.
 
 💪 Bespreek met je tafel het concept van “hackable” URLs, en of je dit al gebruikt in jouw project. Zo niet; bij welke onderdelen binnen jouw project zou je dit soort URLs kunnen inzetten? Hoe zou je je URLs ontwerpen als je dit er ook in wilt verwerken? Laat elkaar je routes zien, en leg deze aan elkaar uit. Maak een issue voor jezelf aan als je hierdoor je URLs wilt redesignen en _refactoren_.
 
@@ -35,7 +35,7 @@ In Express kun je routes op verschillende manieren aanmaken; met _strings paths_
 
 Als frontender zul je regelmatig links naar documentatie krijgen. Zelfs Chad deelt tegenwoordig bronnen. Documentatie lezen, begrijpen en je eigen maken is een belangrijk onderdeel van je (toekomstige) werk.
 
-👉 Zoek in de routing documentatie van Express een voorbeeld van wat je nog niet eerder gebruikt hebt. Maak daarmee een kleine demo voor een `GET` request in je project. Experimenteer met voorbeeld code, en probeer deze je eigen te maken. Stel vragen als je er niet uit komt.
+👉 Zoek in de routing documentatie van Express een voorbeeld van wat je nog niet eerder gebruikt hebt. Maak daarmee een kleine demo voor een `GET` request in je project. Experimenteer met voorbeeld code, en probeer deze je eigen te maken. Schrijf je route op het whiteboard. Stel vragen als je er niet uit komt.
 
 ### Bronnen
 
@@ -64,7 +64,7 @@ In je browser kun je de eigenschappen van een UI event uitlezen, en in Express k
 
 Om de vergelijking met frontend code te maken: in een UI keyboard event kun je bijvoorbeeld uitlezen op welke toets er gedrukt is, om daarmee iets doen (`event.keyCode`). Van een request kun je bijvoorbeeld uitlezen of de query parameter `sorteer` aan de URL is meegegeven (`request.query.sorteer` op `/alle-pizzas?sorteer=prijs`), en daarmee iets doen.
 
-👉 Onderzoek onderstaande bronnen en bespreek met je tafel wat je zou kunnen doen met de `path` property van een request. Stel dat je deze als extra variabele meegeeft aan je view; hoe zou je dit kunnen gebruiken in de HTML van je navigatie? Hoe kun je de eindgebruiker laten weten op welke pagina die zich bevindt?
+👉 Onderzoek onderstaande bronnen en bespreek met je tafel wat je zou kunnen doen met de `path` property van een request. Stel dat je deze als extra variabele meegeeft aan je view; hoe zou je dit kunnen gebruiken in de HTML van je navigatie? Schrijf op het whiteboard pseudo-code voor hoe je de eindgebruiker kan laten weten op welke pagina die zich bevindt.
 
 💪 Zijn er meer request properties waar je iets mee zou kunnen doen?
 
@@ -90,7 +90,7 @@ In Express heb je op dit moment vooral te maken met HTML en `200 OK`, wanneer je
 
 Een status code die je vast wel kent, is de `404 Not Found`. Deze krijg je van een server terug als je een pagina bezoekt die niet bestaat.
 
-💪 Zoek via de documentatie op https://expressjs.com/ zelf uit hoe je een nette 404 pagina kunt maken voor jouw project, en voeg deze toe. Kun je hun simpele voorbeeld combineren met het renderen van een eigen view?
+👉 💪 Zoek via de documentatie op https://expressjs.com/ zelf uit hoe je een nette 404 pagina kunt maken voor jouw project, en voeg deze toe. Kun je hun simpele voorbeeld combineren met het renderen van een eigen view?
 
 ### Bronnen
 
