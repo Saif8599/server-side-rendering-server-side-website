@@ -1,33 +1,74 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](https://github.com/fdnd-task/server-side-rendering-server-side-website/blob/main/docs/INSTRUCTIONS.md)
-
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Bieb in Bloei - Stekjespagina
 
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+- [Beschrijving](#beschrijving)
+- [Gebruik](#gebruik)
+- [Kenmerken](#kenmerken)
+- [Installatie](#installatie)
+- [Bronnen](#bronnen)
+- [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+
+De *Bieb in Bloei* stekjespagina is een dynamische webapplicatie waarmee gebruikers beschikbare stekjes kunnen bekijken en gedetailleerde informatie kunnen krijgen via een server-side rendered website. De toepassing maakt gebruik van **Express.js** en **dynamische routing** om de gegevens uit een **WHOIS API** te laden en weer te geven.
 
 ## Gebruik
-<!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+
+De applicatie biedt:
+
+- Een **stekjespagina** waar alle beschikbare stekjes worden weergegeven met een afbeelding en naam.
+- Een **detailpagina** per stekje met uitgebreide informatie, zoals oorsprong, verzorgingstips en beschikbaarheid.
+- **Server-side rendering (SSR)** om ervoor te zorgen dat de pagina's direct bij het laden de juiste inhoud tonen.
+- Een **header met een ingebouwde navigatiebalk** en een **footer** voor een consistente gebruikerservaring.
+- **Mobile-first ontwerp en responsiviteit**, zodat de pagina optimaal functioneert op zowel mobiele als desktopapparaten.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+
+### Technologieën
+
+- **Node.js & Express.js** – voor de server en routing.
+- **LiquidJS** – als templating engine voor dynamische HTML-rendering.
+- **WHOIS API** – voor het ophalen van gegevens over beschikbare stekjes.
+- **Responsive design** – de pagina schaalt en past zich aan op verschillende schermformaten.
+
+### Structuur
+
+```
+📁 server-side-rendering-server-side-website
+│── 📂 views (Express routes + LiquidJS templates)
+│── 📂 public (CSS, afbeeldingen, scripts)
+│── server.js (Hoofdserverbestand)
+│── package.json (Projectconfiguratie)
+```
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+
+1. **Clone de repository:**
+   ```bash
+   git clone https://github.com/Saif8599/server-side-rendering-server-side-website.git
+   cd server-side-rendering-server-side-website
+   ```
+2. **Installeer de dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start de server:**
+   ```bash
+   npm start
+   ```
+4. **Toegang tot de applicatie:**
+   - Open een browser en ga naar: `http://localhost:8000`
+   - De stekjespagina is te vinden op `/stekjes`
+   - Een specifieke stekjesdetailpagina is te vinden op `/stekjes/:id`
 
 ## Bronnen
+
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [LiquidJS](https://liquidjs.com/)
 
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
+
